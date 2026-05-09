@@ -110,8 +110,8 @@ def arvore_json(raiz):
 
     
 
-heap=huffman('zayra')
+# heap=huffman('zayra')
 
-print(heap)
+# print(heap)
 
-print(arvore_json(heap))
+# print(arvore_json(heap))
