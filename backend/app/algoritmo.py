@@ -61,6 +61,57 @@ def huffman(string):
 
 
 
+def arvore_json(raiz):
+    nodes=[]
+    edges=[]
+
+    node_count = 1
+    edge_count = 1
+    def percorrer_arvore(node,parent_id=None,bit=None):
+        nonlocal node_count
+        nonlocal edge_count
+
+        if node is None:
+            return
+        
+        current_id = f"n{node_count}"
+        node_count+=1
+
+        if node.char is not None:
+            label=f"{node.char}: {node.freq}"
+        else:
+            label= f"{node.freq}"
+        
+        nodes.append({
+            "id": current_id,
+            "label": label
+        })
+
+        if parent_id is not None:
+            edges.append({
+                "id": f"e{edge_count}",
+                "from": parent_id,
+                "to": current_id,
+                "label": bit
+            })
+        
+        #esquerda
+        percorrer_arvore(node.left,current_id,"0")
+
+        #direita
+        percorrer_arvore(node.rigth,current_id,"1")
+
+    percorrer_arvore(raiz)
+
+    return{
+        "nodes": nodes,
+        "edges": edges
+    }
+
+    
+
 heap=huffman('zayra')
 
 print(heap)
+
+print(arvore_json(heap))
