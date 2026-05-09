@@ -1,0 +1,1 @@
+como a arvore é recebida pelo o front: ``
