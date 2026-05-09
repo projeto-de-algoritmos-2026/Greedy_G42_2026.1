@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Árvore de Huffman</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        type="text/javascript"
+        src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Visualizador de Árvore de Huffman</h1>
+
+        <div class="input-area">
+
+            <label for="entrada">
+                Digite uma frase:
+            </label>
+
+            <textarea
+                id="entrada"
+                placeholder="Ex: algoritmo de huffman"
+                rows="4"
+            ></textarea>
+
+            <button id="GenerateBtn">
+                Gerar Árvore
+            </button>
+
+        </div>
+
+        <div id="network"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
