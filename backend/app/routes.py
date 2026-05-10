@@ -6,12 +6,14 @@ from flask_cors import CORS
 style_path=os.path.join(os.path.dirname(__file__),'../../frontend/','templates')
 static_path=os.path.join(os.path.dirname(__file__),'../../frontend/','static')
 
-app=Flask("__name__",template_folder=style_path,static_folder=static_path)
+app=Flask(__name__,template_folder=style_path,static_folder=static_path)
 
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    print('cheguei na rederização')
+    return render_template('index.html')
+    
 
 @app.route('/huffman', methods=['GET','POST'])
 def huffmanR():
