@@ -43,7 +43,7 @@ const options = {
 
     color: "#8d6e63",
 
-    smooth: true,
+    smooth: false,
 
     font: {
         size: 18,
@@ -95,7 +95,7 @@ async function generateTree() {
 }
 
 async function fetchTree(text) {
-
+    
     const response = await fetch(
         "http://localhost:5000/huffman",
         {
@@ -119,13 +119,14 @@ async function fetchTree(text) {
 }
 
 function resetGraph() {
-
+    
     nodes.clear();
 
     edges.clear();
 }
 
 async function animateTree(graph) {
+    
 
     for (const node of graph.nodes) {
 

@@ -94,6 +94,7 @@ def arvore_json(raiz):
                 "to": current_id,
                 "label": bit
             })
+            edge_count+=1
         
         #esquerda
         percorrer_arvore(node.left,current_id,"0")
