@@ -21,8 +21,6 @@ def contagem(string):
     return frequencia
 
 
-print(contagem('zayra'))
-
     
 def huffman(string):
     frequencia=contagem(string)
@@ -109,10 +107,40 @@ def arvore_json(raiz):
         "edges": edges
     }
 
+
+def codificado(raiz):
+    codigo={}
+    def percorre(node,caminho=""):
+        if node is None:
+            return
+        if node.char is not None:
+            codigo[node.char]=caminho
+            return
+        
+        percorre(node.left,caminho+"0")
+        percorre(node.rigth,caminho+"1")
     
+    percorre(raiz)
+    return codigo
+        
+def codificar_texto(texto,codigos):
+    resultado=""
+    for letra in texto:
+        resultado+=codigos[letra]
+    return resultado
 
-# heap=huffman('zayra')
+def diferenca(codificado,texto):
+    ascii_bits=len(texto)*8
+    codificado_bits=len(codificado)
+    taxa=((ascii_bits-codificado_bits)/ascii_bits)*100
+    return {"ascii": ascii_bits, "codificado_bits" : codificado_bits, "taxa": taxa}
 
-# print(heap)
+raiz=huffman('zayra')
 
-# print(arvore_json(heap))
+print(raiz)
+
+print(arvore_json(raiz))
+codigo=codificado(raiz)
+print(codigo)
+print(codificar_texto('zayra',codigo))
+print(diferenca(codificar_texto('zayra',codigo),'zayra'))
