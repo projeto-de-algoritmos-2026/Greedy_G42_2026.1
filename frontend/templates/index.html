@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Árvore de Huffman</title>
 
-    <link rel="stylesheet" href="../../static/style.css">
+    <link rel="stylesheet" href="../static/style.css">
 
     <style>
-        
+
     </style>
-    <script
-        type="text/javascript"
-        src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js">
     </script>
 </head>
 
@@ -29,24 +28,52 @@
                 Digite uma frase:
             </label>
 
-            <textarea
-                id="entrada"
-                placeholder="Ex: algoritmo de huffman"
-                rows="4"
-            ></textarea>
+            <textarea id="entrada" placeholder="Ex: algoritmo de huffman" rows="4"></textarea>
 
-            <button id="GenerateBtn">
-                Gerar Árvore
-            </button>
+            <div class="buttons">
+
+                <button id="PrefixoBtn">
+                    Gerar código prefixo
+                </button>
+
+                <button id="GenerateBtn" class="hidden">
+                    Gerar Árvore
+                </button>
+
+            </div>
+
+            <div id="resultadoContainer" class="resultado hidden">
+
+                <h2>
+                    Sua frase codificada em código prefixo é:
+                </h2>
+
+                <p id="resultadoTexto"></p>
+
+                <h2> Suas taxas de economia são:</h2>
+
+                <p id="resultadoEconomia"></p>
+            </div>
+
+
 
         </div>
 
-        <div id="network"></div>
+        <div id="network" ></div>
 
     </div>
 
 
-    <script src="../../static/app.js"></script>
+    <script src="../static/app.js"></script>
 
 </body>
+
+<footer>
+    <br>
+    <p>for: Gabriel vieira: 242004706 </p>
+    <p>Zayra moraes : 242015989</p>
+ 
+
+</footer>
+
 </html>

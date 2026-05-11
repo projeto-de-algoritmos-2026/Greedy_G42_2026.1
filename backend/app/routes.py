@@ -14,7 +14,7 @@ def index():
     print('cheguei na rederização')
     return render_template('index.html')
     
-
+## rotas todas funcionais 
 @app.route('/huffman', methods=['GET','POST'])
 def huffmanR():
     if request.method =='POST':
