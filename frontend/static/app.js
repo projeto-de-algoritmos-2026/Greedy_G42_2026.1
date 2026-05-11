@@ -27,13 +27,16 @@ const options = {
     physics: false,
 
     nodes: {
-        background: "#c8ad93",
-        border: "#8d6e63",
-        shape: "circle",
-        highlight: {
-            background: "#d6b89c",
-            border: "#6d4c41"
+        color:{
+            background: "#c8ad93",
+            border: "#8d6e63",
+            highlight: {
+                background: "#d6b89c",
+                border: "#6d4c41"
+            },
         },
+        shape: "circle",
+        
         size: 30,
 
         font: {
@@ -132,7 +135,7 @@ const frase = 'taxa de economia de bits em relação a tabela ASCII'
 function showResultado(codigo,tx_economia) {
 
     resultadoTexto.innerText = codigo;
-    resultadoEconomia.innerText = `Quantidade de bits em ASCII: ${tx_economia.ascii} \n Quantidade de bits em Codigo prefixo/método hufman: ${tx_economia.codificado_bits} \n Economia de bits: ${tx_economia.ascii - tx_economia.codificado_bits}` 
+    resultadoEconomia.innerText = `Quantidade de bits em ASCII: ${tx_economia.ascii} \n Quantidade de bits em Codigo prefixo/método huffman: ${tx_economia.codificado_bits} \n Economia de bits: ${tx_economia.ascii - tx_economia.codificado_bits}` 
 
     resultadoContainer.classList.remove("hidden");
 }

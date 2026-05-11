@@ -1,5 +1,7 @@
-body {
+html,body {
     background: #f5efe6;
+    height: 100%;
+    margin: 0;
 }
 
 .container {
@@ -150,4 +152,15 @@ buttons {
     color: #4e342e;
 
     line-height: 1.6;
+}
+
+footer {
+    margin-top: auto;
+
+    background: #b08968;
+    color: white;
+
+    text-align: center;
+
+    padding: 5px;
 }
