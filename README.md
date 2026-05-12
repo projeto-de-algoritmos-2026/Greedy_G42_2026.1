@@ -52,4 +52,4 @@ Abra http://localhost:5000.
 
 O vídeo de apresentação pode ser acessado clicando no link abaixo.
 
-[Apresentação]()
+[Apresentação](https://youtu.be/qt5psLe8NiE)
